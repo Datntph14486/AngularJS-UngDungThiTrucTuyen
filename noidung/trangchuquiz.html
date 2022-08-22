@@ -1,0 +1,77 @@
+<div  class="row">   
+        <div class="row" ng-show="!hienthi">
+          <div class="col text-center">
+              <button class="btn btn-primary" ng-click="start($event)">Start the Quiz</button>
+          </div>
+      </div>
+  
+    <div ng-show="hienthi">
+      <div class="row">
+        <div class="col text-center">
+            <h2><i class="fas fa-clock" style="color: #23B5E1;"></i> 00:20:00</h2>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header ">
+           <h2 class="text-center">BÀI KIỂM TRA</h2>
+
+        </div>
+        <!------->
+        <div class="card-body">
+           <div class="row"> <h4> {{index+1}}.{{list_cauhoi[index].cauhoi}}</h4></div>
+        <hr>
+        <div class="form-check">
+           
+            <label class="form-check-label" for="flexRadioDefault1">
+                <input  class="form-check-input" type="radio" name="dapan" id="cau1" ng-model="list_submit[index].dapaan1">
+                {{list_cauhoi[index].dapaan1}}
+            </label>
+          </div>
+          <!---------------->
+          <div class="form-check">
+          
+            <label class="form-check-label" for="flexRadioDefault2">
+                <input class="form-check-input" type="radio" name="dapan" id="cau2" checked>
+                {{list_cauhoi[index].dapaan2}}
+            </label>
+          </div>
+              <!---------------->
+              <div class="form-check">
+              
+                <label class="form-check-label" for="flexRadioDefault2">
+                    <input class="form-check-input" type="radio" name="dapan" id="cau3" checked>
+                    {{list_cauhoi[index].dapaan3}}
+                </label>
+              </div>
+                  <!---------------->
+          <div class="form-check">
+           
+            <label class="form-check-label" for="flexRadioDefault2">
+                <input class="form-check-input" type="radio" name="dapan" id="cau4" checked>
+                {{list_cauhoi[index].dapaan4}}
+            </label>
+          </div>
+            
+        </div>
+           <!------->
+           <div class="card-footer">
+              <div class="row">
+                  <button class="btn btn-warning col-2 m-3" ng-click="checkinput($event)">Submit</button>
+                  <button class="btn btn-warning col-2 m-3" ng-click="quaylaicauhoi($event)">Quay Lại</button>
+                  <button class="btn btn-warning col-2 m-3" ng-click="nextCauhoi($event)">Tiếp theo</button>
+                <h5>Câu : {{index+1}}/{{list_cauhoi.length}}</h5>
+              
+              </div>
+             
+            
+        </div>
+    </div>
+    
+
+
+  
+
+    <!----------danh mục------>
+   
+
+</div>

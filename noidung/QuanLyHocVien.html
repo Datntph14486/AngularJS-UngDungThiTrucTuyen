@@ -1,0 +1,134 @@
+<div class="row col-12">
+    <h2><label for="">Danh Sách Học Viên </label></h2>
+    <form name="form_sv">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="">Họ Tên</label>
+                <input ng-model="data_hoc_vien.hoten" type="text" name="hoten" id="hoten" class="form-control" required>
+                <span ng-hide="form_sv.hoten.$valid || form_sv.hoten.$untouched " class="text-danger">không được để
+                    trống</span>
+
+            </div>
+
+            <div class="col-md-6">
+                <label for="">Khóa Học</label>
+                <select id="khoa_hoc" name="khoa_hoc" class="form-select" ng-model="data_hoc_vien.khoahoc" required>
+                    <option value="ptcb">Phân Tích Cơ Bản</option>
+                    <option value="ptcbnc">Phân Tích Cơ Bản Nâng Cao</option>
+                    <option value="ptkt">Phân Tích Kĩ Thuật </option>
+                    <option value="ptktnc">Phân Tích Kĩ Thuật Nâng Cao</option>
+                </select>
+
+            </div>
+        </div>
+        <br>
+        <!-----------row 2--->
+        <div class="row">
+            <div class="col-md-6">
+                <label for="">Số Điện Thoại</label>
+                <input type="text" name="sdt" id="sdt" class="form-control" ng-model="data_hoc_vien.sdt" required>
+                <span ng-hide="form_sv.sdt.$valid || form_sv.sdt.$untouched " class="text-danger">không được để
+                    trống</span>
+            </div>
+
+            <div class="col-md-6">
+                <label for="">Ngày Đăng Kí</label>
+                <input type="datetime" name="ngay_dang_ki" id="ngay_dang_ki" class="form-control"
+                    ng-model="data_hoc_vien.ngaydangki" required>
+                    <span ng-hide="form_sv.ngay_dang_ki.$valid || form_sv.ngay_dang_ki.$untouched " class="text-danger">không được để
+                        trống và nhập đúng định dạng datetime</span>
+            </div>
+        </div>
+        <br>
+        <!------------row 3-->
+        <div class="row">
+            <div class="col-md-6">
+                <label for="">Giới Tính : </label>
+                <input value="1" type="radio" name="gioitinh" id="gioi_tinh_nam" class="form-check-input"
+                    ng-model="data_hoc_vien.gioitinh" {{data_hoc_vien.gioitinh==1? "selected" :""}}>
+                <label for="">nam</label>
+                <input value="0" type="radio" name="gioitinh" id="gioi_tinh_nu" class="form-check-input"
+                    ng-model="data_hoc_vien.gioitinh" {{data_hoc_vien.gioitinh==0? "selected" :""}}>
+                <label for="">nữ</label>
+
+
+            </div>
+            <div class="col-md-6">
+                <label for="">EMAIL</label>
+                <input type="email" name="email" id="email" class="form-control" ng-model="data_hoc_vien.email"
+                    required>
+
+                <span ng-hide="form_sv.email.$valid || form_sv.email.$untouched" class="text-danger">không được để
+                    trống</span>
+                <span ng-show="form_sv.email.$error.email" class="text-danger">phải định dạng là email</span>
+
+
+
+            </div>
+            <div class="col-md-6">
+                <br>
+
+                <label for="">Mật Khẩu</label>
+                <input ng-model="data_hoc_vien.matkhau" type="text" name="matkhau" id="matkhau" class="form-control"
+                    required>
+                <span ng-hide="form_sv.matkhau.$valid || form_sv.matkhau.$untouched " class="text-danger">không được
+                    để
+                    trống</span>
+            </div>
+        </div>
+        <!----------------row 4-->
+        <div class="row mt-4">
+            <button class="btn btn-primary col-1 m-3" ng-click="btnCreateHocvien($event)">TẠo Mới</button>
+            <BUtton class="btn btn-warning col-1 m-3" ng-click="update($event)">Lưu Thông Tin</BUtton>
+            <Button class="btn btn-secondary col-1 m-3" ng-click="clearForm($event)">làm Mới</Button>
+
+        </div>
+
+    </form>
+
+
+</div>
+<!-------end form-->
+
+<!-----------table-->
+<div class="table-responsive">
+    <table class="table">
+        //table-responsice
+        <thead>
+            <tr>
+                <th>Họ Tên</th>
+                <th>Số Điện Thoại</th>
+                <th>Giới Tính</th>
+                <th>Khóa Học</th>
+                <th>Ngày Nhập Học</th>
+                <th>Email</th>
+                <th>Mật Khẩu</th>
+                <th colspan="2">Thao Tác</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr ng-repeat="sv in list">
+                <td>{{sv.hoten}}</td>
+                <td>{{sv.sdt}}</td>
+                <td>{{sv.gioitinh}}</td>
+                <td>{{sv.khoahoc}}</td>
+                <td>{{sv.ngaydangki}}</td>
+                <td>{{sv.email}}</td>
+                <td>{{sv.matkhau}}</td>
+                <td>
+    
+                    <a class="btn btn-primary col-auto" ng-click="loadform($event,$index)">Cập Nhật</a>
+    
+                </td>
+                <td>
+                    <a class="btn btn-secondary col-auto" ng-click="btnDeleteHocvien($event,$index)">Xóa</a>
+                </td>
+    
+            </tr>
+    
+        </tbody>
+    
+    </table>
+</div>
+

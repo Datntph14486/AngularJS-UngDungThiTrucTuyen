@@ -1,0 +1,26 @@
+<div class="row offset-md-4">
+<div class="col-md-6">
+  <div class="row"><h3>ĐĂNG NHẬP TÀI KHOẢN</h3></div>
+    <form name="form_dangnhap">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Tài Khoản (email)</label>
+          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ng-model="data_dang_nhap.email" required>
+          <span ng-hide="form_dangnhap.email.$valid || form_dangnhap.email.$untouched" class="text-danger">không được để
+            trống</span>
+        <span ng-show="form_dangnhap.email.$error.email" class="text-danger">phải định dạng là email</span>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Mật Khẩu</label>
+          <input type="password" name="matkhau" class="form-control" id="exampleInputPassword1" ng-model="data_dang_nhap.matkhau" required>
+          <span ng-hide="form_dangnhap.matkhau.$valid || form_dangnhap.matkhau.$untouched " class="text-danger">không được
+            để
+            trống</span>
+        </div>
+
+     
+        <button type="submit" class="btn border btn-outline-secondary" ng-click="dangnhap($event)">Đăng Nhập</button>
+      </form>
+
+</div>
+</div>
+<hr>

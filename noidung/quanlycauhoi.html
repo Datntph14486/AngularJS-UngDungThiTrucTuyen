@@ -1,0 +1,114 @@
+<div class="row col-12">
+    <h2><label for="">Quản Lý Câu Hỏi </label></h2>
+    <form name="form_sv">
+        <div class="row ">
+            <div class="col-md-10">
+                <label for="">Câu Hỏi</label>
+                <input ng-model="data_cauhoi.cauhoi" type="text" name="cauhoi" id="cauhoi" class="form-control" required>
+                <span ng-hide="form_sv.cauhoi.$valid || form_sv.cauhoi.$untouched " class="text-danger">không được để
+                    trống</span>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="">Đáp Án 1</label>
+                <input ng-model="data_cauhoi.dapaan1" type="text" name="dapan1" id="dapan1" class="form-control" required>
+                <span ng-hide="form_sv.dapan1.$valid || form_sv.dapan1.$untouched " class="text-danger">không được để
+                    trống</span>
+
+            </div>
+
+            <div class="col-md-6">
+                <label for="">Đáp Án 2</label>
+                <input ng-model="data_cauhoi.dapaan2" type="text" name="dapan2" id="dapan2" class="form-control" required>
+                <span ng-hide="form_sv.dapan2.$valid || form_sv.dapan2.$untouched " class="text-danger">không được để
+                    trống</span>
+            </div>
+        </div>
+        <br>
+        <!-----------row 2--->
+        <div class="row">
+            <div class="col-md-6">
+                <label for="">Đáp Án 3</label>
+                <input ng-model="data_cauhoi.dapaan3" type="text" name="dapan3" id="dapan3" class="form-control" required>
+                <span ng-hide="form_sv.dapan3.$valid || form_sv.dapan3.$untouched " class="text-danger">không được để
+                    trống</span>
+            </div>
+
+            <div class="col-md-6">
+                <label for="">Đáp Án 4</label>
+                <input ng-model="data_cauhoi.dapaan4" type="text" name="dapan4" id="dapan4" class="form-control" required>
+                <span ng-hide="form_sv.dapan4.$valid || form_sv.dapan4.$untouched " class="text-danger">không được để
+                    trống</span>
+
+            </div>
+        </div>
+        <br>
+        <!------------row 3-->
+        <div class="row">
+            <div class="col-md-10">
+
+                <label for="">Đáp Án Đúng</label>
+                <input ng-model="data_cauhoi.dapandung" type="text" name="dapandung" id="dapandung" class="form-control" required>
+                <span ng-hide="form_sv.dapandung.$valid || form_sv.dapandung.$untouched " class="text-danger">không được để
+                    trống</span>
+
+
+
+            </div>
+         
+
+        </div>
+        <!----------------row 4-->
+        <div class="row mt-4">
+            <button ng-disabled="form_sv.$unvalid" class="btn btn-primary col-1 m-3" ng-click="themCauhoi($event)">TẠo Mới</button>
+            <BUtton class="btn btn-warning col-1 m-3" ng-click="LuuThongtin($event)">Lưu Thông Tin</BUtton>
+            <Button class="btn btn-secondary col-1 m-3" ng-click="clearForm($event)">làm Mới</Button>
+
+        </div>
+
+    </form>
+
+
+</div>
+<!-------end form-->
+
+<!-----------table-->
+<table class="table">
+    <thead>
+        <tr>
+            <th>Câu Hỏi</th>
+            <th>Đáp án 1</th>
+            <th>Đáp án 2</th>
+            <th>Đáp án 3</th>
+            <th>Đáp án 4</th>
+            <th>Đáp án Đúng</th>
+
+            <th colspan="2">Thao Tác</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr ng-repeat="ch in list_cauhoi">
+            <td>{{ch.cauhoi}}</td>
+            <td>{{ch.dapaan1}}</td>
+            <td>{{ch.dapaan2}}</td>
+            <td>{{ch.dapaan3}}</td>
+            <td>{{ch.dapaan4}}</td>
+            <td>{{ch.dapandung}}</td>
+            <td>{{sv.matkhau}}</td>
+            <td>
+
+                <a class="btn btn-primary col-auto" ng-click="loadForm($event,$index)">Cập Nhật</a>
+
+            </td>
+            <td>
+                <a class="btn btn-secondary col-auto" ng-click="xoaCauhoi($event,$index)">Xóa</a>
+            </td>
+
+        </tr>
+
+    </tbody>
+
+</table>

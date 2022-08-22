@@ -1,0 +1,38 @@
+<div class="row offset-md-4 ">
+    <div class="col-md-6">
+      <div class="row"><h3>Cập Nhật Tài Khoản</h3></div>
+        <form >
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Họ Tên</label>
+                <input type="text" class="form-control " id="ho_ten" name="ho_ten" aria-describedby="emailHelp" ng-model="taikhoan.ho_ten" class="">
+            
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Số Điện Thoại</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ng-model="taikhoan.sdt">
+            
+              </div>
+              <div class="mb-3">
+               
+                <label for="">Giới Tính : </label>
+                <input type="radio" name="gioitinh" id="gioi_tinh_nam" class="form-check-input ml-3" ng-model="taikhoan.gioi_tinh">
+                <label for="" class="">nam</label>
+                <input type="radio" name="gioitinh" id="gioi_tinh_nu" class="form-check-input " ng-model="taikhoan.gioi_tinh">
+                <label for="" class="">nữ</label>
+            
+              </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">EMAIL</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ng-model="taikhoan.email">
+          
+            </div>
+        
+        
+    
+         
+            <button type="submit" class="btn border btn-outline-secondary" ng-click="onbtnClickmatKhau($event)">Lưu Thông Tin</button>
+          </form>
+    
+    </div>
+    </div>
+    <hr>

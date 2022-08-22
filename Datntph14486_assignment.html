@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Asm-TaiNguyen/css/bootstrap.min.css">
+</head>
+
+<body ng-app="dat_ass">
+    <div class="container">
+        <div>
+
+            <header class="row ">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"
+                    data-bs-interval="5000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./Asm-TaiNguyen/images/banner1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Asm-TaiNguyen/images/banner4.jpg" class="d-block w-100" alt="...">
+                        </div>
+
+                    </div>
+                </div>
+
+            </header>
+            <!------------menu------------------>
+            <div class="row">
+                <nav class="navbar navbar-expand-lg  border navbar-light bg-light ">
+                    <div class="container-fluid text-black">
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav nav-tabs me-auto mb-2 mb-lg-0">
+                                <li class="nav-item active">
+                                    <a class="btn border-0 btn-outline-secondary " aria-current="page"
+                                        href="#trangchu"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                            <path fill-rule="evenodd"
+                                                d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                                        </svg>
+                                        Trang Chủ</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="btn border-0 btn-outline-secondary" aria-current="page" href="#gioithieu">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-blockquote-left" viewBox="0 0 16 16">
+                                            <path
+                                                d="M2.5 3a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11zm5 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6zm0 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6zm-5 3a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11zm.79-5.373c.112-.078.26-.17.444-.275L3.524 6c-.122.074-.272.17-.452.287-.18.117-.35.26-.51.428a2.425 2.425 0 0 0-.398.562c-.11.207-.164.438-.164.692 0 .36.072.65.217.873.144.219.385.328.72.328.215 0 .383-.07.504-.211a.697.697 0 0 0 .188-.463c0-.23-.07-.404-.211-.521-.137-.121-.326-.182-.568-.182h-.282c.024-.203.065-.37.123-.498a1.38 1.38 0 0 1 .252-.37 1.94 1.94 0 0 1 .346-.298zm2.167 0c.113-.078.262-.17.445-.275L5.692 6c-.122.074-.272.17-.452.287-.18.117-.35.26-.51.428a2.425 2.425 0 0 0-.398.562c-.11.207-.164.438-.164.692 0 .36.072.65.217.873.144.219.385.328.72.328.215 0 .383-.07.504-.211a.697.697 0 0 0 .188-.463c0-.23-.07-.404-.211-.521-.137-.121-.326-.182-.568-.182h-.282a1.75 1.75 0 0 1 .118-.492c.058-.13.144-.254.257-.375a1.94 1.94 0 0 1 .346-.3z" />
+                                        </svg>
+                                        Giới Thiệu</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="btn border-0 btn-outline-secondary" aria-current="page"
+                                        href="#lienhe"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                        </svg> Liên Hệ</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="btn border-0 btn-outline-secondary" aria-current="page" href="#gopy"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-square-dots" viewBox="0 0 16 16">
+                                            <path
+                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                            <path
+                                                d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                        </svg> Góp Ý</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="btn border-0 btn-outline-secondary" aria-current="page"
+                                        href="#hoidap"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-question-square" viewBox="0 0 16 16">
+                                            <path
+                                                d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                            <path
+                                                d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                                        </svg> Hỏi Đáp</a>
+                                </li>
+
+
+                            </ul>
+                            <ul class="navbar-nav ml-auto nav-tabs">
+
+                                <li  class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle border" href="#" id="navbarDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                        </svg>
+                                        Tài Khoản
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown"ng-controller="onBtnHocVien">
+                                        <li><a class="dropdown-item" href="#dangki">Đăng Kí</a></li>
+                                        <li><a class="dropdown-item" href="#dangnhap">Đăng Nhập</a></li>
+
+                                        <li><a class="dropdown-item" href="#doimatkhau">Đổi Mật Khẩu</a></li>
+                                        <li><a class="dropdown-item" href="#capnhat">Cập Nhật Thông Tin Tài Khoản</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#hocvien">Quản Lý Học Viên</a></li>
+                                        <li ><a class="dropdown-item" href="#qlcauhoi">Quản Lý Quiz</a></li>
+
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+
+                                        <li><a class="dropdown-item" href="#baithi"> Bài Kiểm tra kiến thức đầu tư</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+            <br>
+            <!----------nội dung---->
+
+            <div ng-view></div>
+
+        </div>
+        <footer class="mt-3 row bg-secondary  text-white text-center " style="height: 100px;">
+
+            <h4 style="margin-top: 30px;">“Nếu không tìm cách kiếm được tiền ngay cả lúc đang ngủ, bạn sẽ phải làm việc
+                cho tới khi chết”</h4>
+        </footer>
+
+    </div>
+
+
+    <script src="./Asm-TaiNguyen/js/angularjs.min.js"></script>
+    <script src="./Asm-TaiNguyen/js/bootstrap.min.js"></script>
+    <script src="./Asm-TaiNguyen/js/jquery.min.js"></script>
+    <script src="./Asm-TaiNguyen/js/popper.min.js"></script>
+    <script src="./Asm-TaiNguyen/js/angular-route.js"></script>
+    <script src="./noidung/dangki.js"></script>
+    <script src="./Asm-TaiNguyen/db/Students.js"></script>
+    <script src="./noidung/quiz.js"></script>
+    <script src="./noidung/quanlyhocvien.js"></script>
+    <script src="./noidung/listkhoahoc.js"></script>
+    <script>
+        const app = angular.module("dat_ass", ["ngRoute"]);
+        app.config(function ($routeProvider, $locationProvider) {
+            $locationProvider.hashPrefix('');
+            $routeProvider
+                .when("/trangchu", {
+                    templateUrl: "noidung/trangchu.html",
+                    controller: "khoahoc",
+                })
+                .when("/gioithieu", {
+                    templateUrl : "noidung./gioithieu.html",
+                })
+                .when("/lienhe", {
+                    templateUrl : "noidung/lienhe.html",
+                })
+                .when("/hoidap", {
+                    templateUrl: "noidung/hoidap.html",
+                })
+                .when("/gopy", {
+                    templateUrl: "noidung/gopy.html",
+                })
+                .when("/dangnhap", {
+                    templateUrl: "noidung/dangnhap.html",
+                    controller: "onBtnHocVien",
+                })
+                .when("/dangki", {
+                    templateUrl: "noidung/dangki.html",
+                    controller: "taikhoan",
+                }
+
+                )
+                .when("/doimatkhau", {
+                    templateUrl: "noidung/doimatkhau.html",
+                })
+                .when("/baithi", {
+                    templateUrl: "noidung/trangchuquiz.html",
+                    controller: "onbtnquiz",
+                })
+                .when("/capnhat", {
+                    templateUrl: "noidung/thongtin.html",
+                })
+                .when("/hocvien", {
+                    templateUrl: "noidung/QuanLyHocVien.html",
+                    controller: "onBtnHocVien",
+                })
+                .when("/qlcauhoi", {
+
+                    templateUrl: "noidung/quanlycauhoi.html",
+                    controller: "onbtnquiz",
+                   
+                })
+                .otherwise({
+                    templateUrl: "noidung/trangchu.html",
+
+                })
+        });
+
+
+        app.controller("dangkiContrller", dangkiContrller);
+        app.controller("taikhoan", taikhoan);
+        app.controller("onbtnquiz", onbtnquiz);
+        app.controller("onBtnHocVien", onBtnHocVien);
+        app.controller("khoahoc", khoahoc);
+
+    </script>
+
+</body>
+
+</html>
